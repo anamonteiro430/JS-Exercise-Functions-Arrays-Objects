@@ -263,15 +263,21 @@ function getOlderCars(inventory, maxYear) {
  * in the same order as they appear in the original inventory.
 */
 function getGermanCars(inventory) {
-  let germanCar = ["Audi", "Mercedes-Benz", "Volkswagon", "BMW"]
   let newArray = [];
-  for (let i = 0; i < inventory.length; i++) {
-    if (inventory[i] === inventory.includes(germanCar)) {
-    newArray.push(inventory[i]);
-    }  
-  }  return newArray  
-}
+  for(let i = 0; i < inventory.length; i++){
 
+    if(inventory[i].car_make == "Audi"){
+      newArray.push(inventory[i])
+    }else if(inventory[i].car_make == "Mercedes-Benz"){
+      newArray.push(inventory[i])
+    }else if(inventory[i].car_make == "Volkswagen"){
+      newArray.push(inventory[i])
+  }else if(inventory[i].car_make == "BMW"){
+    newArray.push(inventory[i])
+    }
+  }
+  return newArray;
+}
 /**
  * ### Challenge refactor to arrow functions
  * 
@@ -290,9 +296,10 @@ function getGermanCars(inventory) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a, b) => a + b;
+
+const addFive = (num) => num + 5;
+const argTimesTwo = (num) => num * 2;
 
 /**
  * ### Challenge `carMaker`
